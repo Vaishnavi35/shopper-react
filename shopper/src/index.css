@@ -9,6 +9,7 @@ html, body{
   padding: 0;
   color: #000;
   line-height: 24px;
+  box-sizing: border-box;
 }
 .shopper-color{
   color: rgb(139, 195, 74);
@@ -19,4 +20,11 @@ html, body{
 .search_border{
   border: 1px solid rgb(224, 224, 224);
   border-radius: 6px 0 0 6px;
+}
+.search_border:focus-visible{
+  outline: none;
+}
+.login_btn{
+  border: 2px solid #757575;
+  color: #757575;
 }
