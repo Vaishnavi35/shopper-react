@@ -24,7 +24,7 @@ export default function Main() {
               <p className="text-5xl font-normal">We have dream to connect wholesalers to independent Customers</p>
               <button className="shopper-bgcolor mt-7 w-32 h-12 rounded-md font-semibold">Explore</button>
             </div>
-            <div className="absolute w-[90%] left-2/4 -translate-x-1/2 -translate-y-1/4 bg-white px-8 py-5 shadow-[0_2px_7px_0px_rgba(181,181,181,.5)] rounded-md h-[350px]" >
+            <div className="absolute w-[95%] left-2/4 -translate-x-1/2 -translate-y-1/4 bg-white px-8 py-5 shadow-[0_2px_7px_0px_rgba(181,181,181,.5)] rounded-md h-[350px]" >
               <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={50}
@@ -52,7 +52,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <div className="mt-[330px] w-[90%] flex flex-col items-center text-left mx-auto">
+        <div className="mt-[330px] w-[95%] flex flex-col items-center text-left mx-auto">
           <div className="shopper-color text-3xl w-full mb-5">Top Seller</div>
           <div className="flex gap-x-12 w-full">
             {
@@ -85,7 +85,7 @@ export default function Main() {
                   Explore More >
           </div>
         </div>
-        <div className="w-[90%] flex text-left mx-auto mt-24 gap-x-8">
+        <div className="w-[95%] flex text-left mx-auto mt-24 gap-x-8">
             <div className="flex-1">
               <div className="shopper-color text-3xl">Why Become Buyer?</div>
               <div className="text-base mt-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
@@ -105,7 +105,7 @@ export default function Main() {
               <button className="shopper-bgcolor text-base w-[150px] mt-5 rounded-md h-10 text-white">Apply to Sell</button>
             </div>
         </div>
-        <div className="w-[90%] flex text-left mx-auto mt-24 gap-x-8">
+        <div className="w-[95%] flex text-left mx-auto mt-24 gap-x-8">
         </div>
       </div>
     </main>
