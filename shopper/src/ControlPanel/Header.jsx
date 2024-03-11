@@ -21,8 +21,8 @@ export default function Header() {
                             <button className="login_btn w-24 h-10 font-semibold rounded-md text-xs mr-5">Sign up</button>
                         </div>
                         <div className="flex gap-x-6 items-center h-full">
-                            <img src={heart} className="w-6 h-6"/>
-                            <img src={cart} className="w-6 h-6"/>
+                            <img src={heart} className="w-6 h-6" alt="wishList"/>
+                            <img src={cart} className="w-6 h-6" alt="cart"/>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function Header() {
                             return(
                                 <ol key={i}>
                                     <a className="cursor-pointer">
-                                    {v}  
+                                        {v}
                                     </a>
                                 </ol>
                             )
