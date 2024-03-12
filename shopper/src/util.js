@@ -2,7 +2,15 @@
 import cat_glass from './images/cat glass.jpg';
 import bycycle2 from './images/bycycle2.png';
 import wooden_bench from './images/wooden bench.jpg';
-
+import bed from './images/bed2.webp';
+import visual_electronics from './images/visual_electronics.png';
+import small_bag from './images/small bag.jpg';
+import mini_table from './images/mini table.jpg';
+import chappal from './images/ladies chappal.jpg'; 
+import ExerciseBench from './images/Exercise-Bench-PNG-Clipart.png';
+import shoe from './images/green shoe.jpg';
+import tea_pot from './images/tea pot.webp';
+import chair2 from './images/chair 2.jpg'; 
 
 export const top_seller_list = [
     {
@@ -27,6 +35,68 @@ export const top_seller_list = [
         img : wooden_bench,
     },
 
+];
+
+export const landscape_list = [
+    {
+        id : 2,
+        title : "SAVA DECK300 Mountain Bike 29",
+        seller: "Cyrusshare",
+        price : "$1,399.99",
+        img : mini_table,
+    },
+    {
+        id : 3,
+        title : "Premium Wood Luna Bench",
+        seller: "Cobind pvt.",
+        price : "$354.75",
+        img : small_bag,
+    },
+    {
+        id : 4,
+        title : "SAVA DECK300 Mountain Bike 29",
+        seller: "Cyrusshare",
+        price : "$1,399.99",
+        img : bed,
+    },
+    {
+        id : 5,
+        title : "Premium Wood Luna Bench",
+        seller: "Cobind pvt.",
+        price : "$354.75",
+        img : chappal,
+    },
+];
+
+export const landscape_list2 = [
+    {
+        id : 2,
+        title : "SAVA DECK300 Mountain Bike 29",
+        seller: "Cyrusshare",
+        price : "$1,399.99",
+        img : ExerciseBench,
+    },
+    {
+        id : 3,
+        title : "Premium Wood Luna Bench",
+        seller: "Cobind pvt.",
+        price : "$354.75",
+        img : shoe,
+    },
+    {
+        id : 4,
+        title : "SAVA DECK300 Mountain Bike 29",
+        seller: "Cyrusshare",
+        price : "$1,399.99",
+        img : tea_pot,
+    },
+    {
+        id : 5,
+        title : "Premium Wood Luna Bench",
+        seller: "Cobind pvt.",
+        price : "$354.75",
+        img : chair2,
+    },
 ]
 
  
