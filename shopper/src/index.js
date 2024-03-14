@@ -4,12 +4,14 @@ import  Header from './ControlPanel/Header';
 import  Main from "./ControlPanel/Main";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import Footer from './ControlPanel/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <Header/>
     <Main/>
+    <Footer />
   </>
 );
 

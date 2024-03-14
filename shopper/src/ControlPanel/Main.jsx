@@ -139,7 +139,7 @@ export default function Main() {
                       <div className="border-[#E0E0E0] border pb-5 flex-1" key={i}>
                         <img src={v.img} alt={v.title} className="h-[250px] w-full" />
                         <div className="flex justify-between p-5 pb-0 gap-x-2 w-full border-t border-[#E0E0E0]">
-                          <div>
+                          <div  className="w-full">
                             <div className="text-[#757575] text-sm">
                               {v.seller}
                             </div>
@@ -169,7 +169,7 @@ export default function Main() {
                       <div className="border-[#E0E0E0] border pb-5 flex-1" key={i}>
                         <img src={v.img} alt={v.title} className="h-[250px] w-full" />
                         <div className="flex justify-between p-5 pb-0 gap-x-2 w-full border-t border-[#E0E0E0]">
-                          <div>
+                          <div  className="w-full">
                             <div className="text-[#757575] text-sm">
                               {v.seller}
                             </div>
