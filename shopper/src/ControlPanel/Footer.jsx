@@ -1,7 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faFacebook } from '@awesome.me/kit-KIT_CODE/icons';
-import { faAllergies } from '@fortawesome/free-solid-svg-icons'
+import { IconContext } from  "react-icons";
+import { FaFacebook, FaInstagram, FaPinterest, FaTwitter  } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -38,10 +37,12 @@ export default function Footer() {
             <div className="flex flex-col gap-x-3">
                 <div className='font-bold  mb-2'>Follow Us</div>
                 <div>
-                    <div><FontAwesomeIcon icon={faAllergies} />Facebook</div>
-                    <div>Pinterest</div>
-                    <div>Twitter</div>
-                    <div>Instagram</div>
+                <IconContext.Provider value={{ className: "shopper-color" }}>
+                    <div className='flex gap-x-1 items-center'><FaFacebook />Facebook</div>
+                    <div className='flex gap-x-1 items-center'><FaPinterest />Pinterest</div>
+                    <div className='flex gap-x-1 items-center'><FaTwitter />Twitter</div>
+                    <div className='flex gap-x-1 items-center'><FaInstagram />Instagram</div>
+                </IconContext.Provider>
                 </div>
             </div>
         </div>
