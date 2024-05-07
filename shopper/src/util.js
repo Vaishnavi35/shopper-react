@@ -99,6 +99,18 @@ export const landscape_list2 = [
     },
 ]
 
+export const submenu_list = [
+    {
+        name : "Home Decor",
+        total : 2549846,
+        list : [
+            "Pots & Pans", "Pressure Cookers", "Kitchen Tools", "Gas Stoves", "Dining & Serving", "Coffee Mugs", "Dinnerware & Crockery", "Bar & Glassware",
+            "Kitchen Storage", "Lunch Boxes", "Flasks & Casseroles", "Kitchen Containers", "Furniture", "Beds", "Sofas", "Dining tables & Sets",
+            "Mattresses", "Tables", "Chairs", "Bean", "Bags", "Shoe Racks", "TV Units & Cabinets", "Wardrobes"
+        ]
+    }
+]
+
  
 
 

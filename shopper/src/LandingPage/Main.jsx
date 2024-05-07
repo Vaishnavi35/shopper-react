@@ -1,7 +1,7 @@
 
 import LandscapeTheme from "../images/LandscapeTheme.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, A11y } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, A11y } from 'swiper/modules';
 import SliderImages from './SliderImages';
 import right_arrow from '../images/right arrow.png';
 import { top_seller_list } from '../util';
@@ -30,10 +30,14 @@ export default function Main() {
             </div>
             <div className="absolute w-[95%] left-2/4 -translate-x-1/2 -translate-y-1/4 bg-white px-8 py-5 shadow-[0_2px_7px_0px_rgba(181,181,181,.5)] rounded-md h-[350px]" >
               <Swiper
-                modules={[Navigation, A11y]}
+                modules={[Autoplay, Pagination, Navigation, A11y]}
                 spaceBetween={50}
                 slidesPerView={3}
                 navigation={true}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
                 // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
                 onSlideChange={() => console.log('slide change')}
@@ -44,7 +48,7 @@ export default function Main() {
                   SliderImages.map((v, i) => {
                     return (
                       <SwiperSlide key={`swipperSlider-${i}`}>
-                        <motion.div whileHover={{scale: 1.1}} className="flex flex-col">
+                        <motion.div whileHover={{scale: 1.1}} className="flex flex-col items-center">
                           <img src={v.img} key={`slider-${i}`} alt={v.title} className="w-[250px] h-[250px]" />
                           <p className="mt-3 text-[#757575] font-semibold">{v.title}</p>
                         </motion.div>
@@ -113,9 +117,9 @@ export default function Main() {
             <div className="flex-1">
                 <motion.div whileHover={{scale: 1.1}} className="mb-12">
                     <div className="border-[#E0E0E0] border pb-5 flex-1">
-                    <img src={visual_electronics} alt="visual electronics" className="h-[250px] w-full" />
+                    <img src={visual_electronics} alt="visual electronics" className="h-[450px] w-full  border-t border-[#E0E0E0]" />
                     <div className="flex justify-between p-5 pb-0 gap-x-2 w-full">
-                      <div>
+                      <div  className="w-full">
                         <div className="text-[#757575] text-sm">
                           Cobalt Union
                         </div>
@@ -191,8 +195,8 @@ export default function Main() {
               </div>
               <div className="mt-12">
                     <motion.div whileHover={{scale: 1.1}} className="border-[#E0E0E0] border pb-5 flex-1">
-                    <img src={cactus} alt="cactus" className="h-[250px] w-full" />
-                    <div className="flex justify-between p-5 pb-0 gap-x-2 w-full">
+                    <img src={cactus} alt="cactus" className="h-[450px] w-full" />
+                    <div className="flex justify-between p-5 pb-0 gap-x-2 w-full  border-t border-[#E0E0E0]">
                       <div>
                         <div className="text-[#757575] text-sm">
                           Cobalt Union
