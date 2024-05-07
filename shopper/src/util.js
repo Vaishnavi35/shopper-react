@@ -101,15 +101,96 @@ export const landscape_list2 = [
 
 export const submenu_list = [
     {
-        name : "Home Decor",
-        total : 2549846,
-        list : [
+        name: "Home Decor",
+        total: 26754,
+        list: [
             "Pots & Pans", "Pressure Cookers", "Kitchen Tools", "Gas Stoves", "Dining & Serving", "Coffee Mugs", "Dinnerware & Crockery", "Bar & Glassware",
             "Kitchen Storage", "Lunch Boxes", "Flasks & Casseroles", "Kitchen Containers", "Furniture", "Beds", "Sofas", "Dining tables & Sets",
             "Mattresses", "Tables", "Chairs", "Bean", "Bags", "Shoe Racks", "TV Units & Cabinets", "Wardrobes"
         ]
+    },
+    {
+        name: "Furniture",
+        total: 2984,
+        list: [
+            "Sofas & Sectionals", "Coffee Tables", "TV Stands", "Bookcases", "Accent Tables", "Filing Cabinets", "Office Chairs", "Desks", "Dining Chairs",
+            "Dining Tables", "Bar Stools", "Kitchen Islands", "Beds", "Bedroom Sets", "Dressers & Chests", "Nightstands", "Mattresses", "Office Furniture",
+            "Kids' Furniture", "Outdoor Furniture", "Patio Furniture", "Adirondack Chairs", "Fire Pits", "Outdoor Sofas"
+        ]
+    },
+    {
+        name: "Lighting",
+        total: 278944,
+        list: [
+            "Chandeliers", "Pendants", "Flush Mounts", "Wall Sconces", "Bathroom Vanity Lights", "Ceiling Fans", "Table Lamps", "Floor Lamps",
+            "Desk Lamps", "Kitchen Island Lighting", "Outdoor Wall Lights", "Outdoor Pendant Lights", "Outdoor Flush Mounts", "Landscape Lighting",
+            "Recessed Lighting", "Track Lighting", "Under Cabinet Lighting", "Lamp Shades", "Light Bulbs", "Lighting Accessories", "Smart Lighting",
+            "Novelty Lighting", "Tiffany Lamps", "Stained Glass Panels"
+        ]
+    },
+    {
+        name: "Home Accents",
+        total: 2654,
+        list: [
+            "Mirrors", "Wall Decor", "Wall Clocks", "Picture Frames", "Candles & Holders", "Vases", "Decorative Bowls", "Artificial Plants",
+            "Wreaths & Garlands", "Decorative Trays", "Throw Pillows", "Throw Blankets", "Curtains & Drapes", "Area Rugs", "Wall Shelves",
+            "Bookends", "Decorative Jars & Canisters", "Decorative Accents", "Indoor Fountains", "Wall Stickers & Murals", "Wall Sculptures",
+            "Tapestries", "Coasters", "Decorative Plates & Bowls"
+        ]
+    },
+    {
+        name: "Rugs",
+        total: 2476765,
+        list: [
+            "Area Rugs", "Runner Rugs", "Outdoor Rugs", "Kitchen Rugs", "Bathroom Rugs", "Doormats", "Rug Pads", "Accent Rugs", "Shag Rugs",
+            "Wool Rugs", "Sisal & Jute Rugs", "Braided Rugs", "Persian Rugs", "Oriental Rugs", "Traditional Rugs", "Modern Rugs",
+            "Contemporary Rugs", "Bohemian Rugs", "Vintage Rugs", "Southwestern Rugs", "Geometric Rugs", "Animal Print Rugs", "Round Rugs",
+            "Square Rugs"
+        ]
+    },
+    {
+        name: "Outdoors",
+        total: 25684,
+        list: [
+            "Patio Furniture", "Outdoor Dining", "Outdoor Seating", "Outdoor Decor", "Outdoor Lighting", "Outdoor Cooking", "Patio Umbrellas",
+            "Outdoor Rugs", "Fire Pits", "Outdoor Structures", "Garden Planters", "Grills & Outdoor Cooking", "Garden & Lawn Care",
+            "Deck Boxes & Storage", "Outdoor Shades", "Hot Tubs & Spas", "Pools & Accessories", "Outdoor Heating", "Outdoor Power Equipment",
+            "Pest Control", "Outdoor Games & Play", "Outdoor Playhouses", "Trampolines", "Playground Equipment"
+        ]
+    },
+    {
+        name: "Holidays",
+        total: 89724,
+        list: [
+            "Christmas Decorations", "Halloween Decorations", "Thanksgiving Decorations", "Easter Decorations", "Hanukkah Decorations",
+            "Valentine's Day Decorations", "Independence Day Decorations", "St. Patrick's Day Decorations", "Mother's Day Decorations",
+            "Father's Day Decorations", "New Year's Decorations", "Birthday Decorations", "Graduation Decorations", "Wedding Decorations",
+            "Baby Shower Decorations", "Anniversary Decorations", "Bridal Shower Decorations", "Retirement Decorations", "Engagement Decorations",
+            "Housewarming Decorations", "Prom Decorations", "Quinceañera Decorations", "Sweet 16 Decorations", "Bar & Bat Mitzvah Decorations"
+        ]
+    },
+    {
+        name: "Gifts",
+        total: 223424,
+        list: [
+            "Gifts for Him", "Gifts for Her", "Gifts for Kids", "Gifts for Teens", "Gifts for Pets", "Gifts for Teachers", "Gift Cards",
+            "Personalized Gifts", "Gift Baskets", "Gourmet Gifts", "Wine Gifts", "Chocolates & Sweets", "Flower Delivery", "Subscription Boxes",
+            "Experience Gifts", "DIY Gifts", "Last-Minute Gifts", "White Elephant Gifts", "Secret Santa Gifts", "Stocking Stuffers",
+            "Unique Gifts", "Funny Gifts", "Romantic Gifts", "Corporate Gifts"
+        ]
+    },
+    {
+        name: "Events",
+        total: 2454563,
+        list: [
+            "Wedding Registry", "Birthday Registry", "Baby Registry", "Housewarming Registry", "Graduation Registry", "Anniversary Registry",
+            "Retirement Registry", "Engagement Registry", "Holiday Registry", "Charity Registry", "Fundraising Registry", "Wish Lists",
+            "Event Planning", "Invitations & Announcements", "Party Supplies", "Party Decorations", "Party Favors", "Tableware & Serveware",
+            "Balloons & Accessories", "Cake Toppers", "Candles & Candle Holders", "Streamers & Confetti", "Photobooth Props", "Costumes & Accessories"
+        ]
     }
-]
+];
+
 
  
 

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState  = {
-    hoverSubMenu : "", // testing
-    hoverType : "leave"
+    hoverSubMenu : "Home Decor",
+    hoverType : "hover"
 }
 
 
@@ -18,9 +18,13 @@ export const subMenuSlice = createSlice({
             if(action.payload.hoverType){
                 state.hoverType = action.payload.hoverType
             }
+        },
+        leaveSubMenu : (state) => {
+            state.hoverSubMenu = "";
+            state.hoverType = "leave"
         }
     }
 });
 
-export const {hoverOnSubMenu} = subMenuSlice.actions;
+export const {hoverOnSubMenu, leaveSubMenu} = subMenuSlice.actions;
 export default subMenuSlice.reducer;

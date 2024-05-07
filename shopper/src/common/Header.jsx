@@ -4,9 +4,9 @@ import {motion } from "framer-motion";
 import LoginModal from "../Modal/LoginModal";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoginModal, showRegisterModal } from "../slices/LoginReducer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SubMenu from "../Modal/SubMenu";
-import {hoverOnSubMenu} from "../slices/SubMenuReducer";
+import {hoverOnSubMenu, leaveSubMenu} from "../slices/SubMenuReducer";
 
 const nav_list = ['Home Decor', 'Furniture', 'Lighting', 'Home Accents', 'Rugs', 'Outdoors', 'Holidays', 'Gifts', 'Events'];
 
@@ -19,20 +19,17 @@ export default function Header() {
     const sub_menu_hover_state = useSelector((state) => state.subMenuHover.hoverType);
 
     const dispatch = useDispatch();
-    const [subMenu, setSubMenu] = useState("Home Decor"); // testing
+    const [subMenu, setSubMenu] = useState("");
     const [rect, setRect] = useState("") ;
 
-    // const subMenuStyle = () => {
-    //     return{
-    //         color : 
-    //     }
-    // }
+    useEffect(() => {
+        console.log("hover_sub_menu changed : ",hover_sub_menu);
+    },[hover_sub_menu])
 
     const hoverSubmenu = (param,event) =>  {
         setSubMenu(param);
         let sub_menu_state = {
             hoverSubMenu : param,
-            // hoverType : "hover"
         }
         dispatch(hoverOnSubMenu(sub_menu_state));
         console.log("submenu hoverSubmenu : ",param);
@@ -43,6 +40,9 @@ export default function Header() {
 
     function leaveSubmenu() {
         setSubMenu((val) => val = "");
+        if(sub_menu_hover_state === "leave"){
+            dispatch(leaveSubMenu());
+        }
         console.log("submenu leaveSubmenu : ");
     }
 
@@ -74,7 +74,7 @@ export default function Header() {
                     {
                         nav_list.map((v,i) => {
                             return(
-                                    <li className={`cursor-pointer h-10 flex items-center ${(hover_sub_menu == v) ? 'shopper-color' : null}`}  key={i}  onMouseEnter={(e) => hoverSubmenu(v,e)} onMouseLeave={leaveSubmenu}>
+                                    <li className={`cursor-pointer h-10 flex items-center ${(hover_sub_menu === v) ? 'shopper-color' : null}`}  key={i}  onMouseEnter={(e) => hoverSubmenu(v,e)} onMouseLeave={leaveSubmenu}>
                                         {v}
                                     </li>
                             )

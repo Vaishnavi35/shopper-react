@@ -11,7 +11,7 @@ html, body{
   line-height: 24px;
   box-sizing: border-box;
 }
-.shopper-color{
+.shopper-color, .submenu_list a:hover{
   color: #8bc34a;
 }
 .shopper-bgcolor{
