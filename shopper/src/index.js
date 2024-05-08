@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './LandingPage/LandingPage.jsx';
-import  {LoginStore}  from './store/LoginStore';
-import  {SubMenuHoverStore}  from './store/SubMenuHoverStore';
 import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import  {loginModalSlice}   from "./slices/LoginReducer";

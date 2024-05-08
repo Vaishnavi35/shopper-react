@@ -4,6 +4,7 @@ import { FaFacebook, FaGooglePlus, FaPinterest  } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from 'react-redux';
 import { showLoginModal, showRegisterModal, forgotPassword, closeModal } from "../slices/LoginReducer";
+import { useForm } from "react-hook-form";
 
 export default function LoginModal() {
 
@@ -12,6 +13,7 @@ export default function LoginModal() {
     const signup = useSelector((state) => state. login.showRegisterModal);
     const forgot_password = useSelector((state) => state. login.showForgotPassword);
     const reset_password = useSelector((state) => state. login.showResetPassword);
+    const {register, handleSubmit, formState : {errors} } = useForm();
 
     function googlePlusLogin() {
         window.open("http://localhost:5000/google", "_self");
@@ -19,6 +21,12 @@ export default function LoginModal() {
         // .then(data => console.log("data"))
         // .catch(err => console.log(err));
     }
+
+    console.log({ ...register("email") });
+
+    const onSubmit = (data) => {  
+        console.log(data);
+    };
 
   return (
     <div className='text-sm fixed top-0 bottom-0 right-0 left-0 z-10' id='LoginModal'>
@@ -33,20 +41,33 @@ export default function LoginModal() {
                         <div className="font-bold text-[34px]">SH<span className="shopper-color text-[50px]">o</span>PPER</div>
                         <div className="text-center font-semibold text-xs mt-2">Smart Marketplace</div>
                     </div>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='flex flex-col gap-y-5 mb-5'>
                             {signup && <input type='text' placeholder='Full Name' className='border-[#C6C6C5] border h-10 px-5'/>}
-                            <input type='text' placeholder='Email Address' className='border-[#C6C6C5] border h-10 px-5'/>
-                            <input type='text' placeholder='Password'  className='border-[#C6C6C5] border h-10  px-5'/>
-                        </div>
+                            <input type='text' placeholder='Email Address' {...register("email", {required : true})} className='border-[#C6C6C5] border h-10 px-5'/>
+                            {errors.email && errors.email.type === "required" && (
+                                <p  className="errorMsg">Email is required</p>
+                            )}
+                            <input type='text' placeholder='Password' {...register("password", {required : true, minLength: 6})} className='border-[#C6C6C5] border h-10  px-5'/>
+                            {errors.password && errors.password.type === "required" && (
+                                <p className="errorMsg">Password is required.</p>
+                              )}
+                              {errors.password && errors.password.type === "minLength" && (
+                                <p className="errorMsg">
+                                  Password should be at-least 6 characters.
+                                </p>
+                              )}
+                            </div>
+                        
                         {!signup && 
                             <div className='flex justify-between mb-8'>
-                                <div><input type='checkbox' className='mr-1'/>Keep me Logged in</div>
+                                <div><input type='checkbox' className='mr-1' {...register("login_check", {required: true})}/>Keep me Logged in</div>
+                                {errors.login_check && errors.login_check.type == 'required' && (<p>Please select the checkbox</p>)}
                                 <div className='cursor-pointer' onClick={() => dispatch(forgotPassword('forgot_password'))}>Forgot Password?</div>
                             </div>
                         }
                         <div>
-                            <motion.button type='button' whileTap={{scale: 0.85}} className={`${signup ? 'w-[140px]' : ' w-24'} h-10 font-semibold rounded-md text-xs mr-5 shopper-bgcolor text-white`}> {(signup) ? 'Create Account' : 'Log in'}</motion.button>
+                            <motion.button type="submit" whileTap={{scale: 0.85}} className={`${signup ? 'w-[140px]' : ' w-24'} h-10 font-semibold rounded-md text-xs mr-5 shopper-bgcolor text-white`}> {(signup) ? 'Create Account' : 'Log in'}</motion.button>
                             {!signup && <motion.button  type='button' whileTap={{scale: 0.85}} className="h-10 font-semibold rounded-md text-xs mr-5 w-[140px] border-[#C8C8C8] border">Log in as a Guest</motion.button>}
                         </div>
                     </form>

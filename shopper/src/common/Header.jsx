@@ -74,7 +74,7 @@ export default function Header() {
                     {
                         nav_list.map((v,i) => {
                             return(
-                                    <li className={`cursor-pointer h-10 flex items-center ${(hover_sub_menu === v) ? 'shopper-color' : null}`}  key={i}  onMouseEnter={(e) => hoverSubmenu(v,e)} onMouseLeave={leaveSubmenu}>
+                                    <li className={`cursor-pointer h-10 flex items-center ${(hover_sub_menu === v) ? 'shopper-color' : null}`} key={i}  onMouseEnter={(e) => hoverSubmenu(v,e)} onMouseLeave={leaveSubmenu}>
                                         {v}
                                     </li>
                             )
@@ -87,7 +87,7 @@ export default function Header() {
                (login || signup || forgot_password || reset_password) && <LoginModal />
             }
             {
-                hover_sub_menu && (sub_menu_hover_state === "hover" || subMenu)  && <SubMenu rect={rect} />
+                hover_sub_menu && (sub_menu_hover_state === "hover" || subMenu)  && <SubMenu rect={rect}  />
             }
         </>
     )
