@@ -62,7 +62,7 @@ export default function Main() {
         </div>
         <div className="mt-[330px] w-[95%] flex flex-col items-center text-left mx-auto">
           <div className="shopper-color text-3xl w-full mb-5">Top Seller</div>
-          <div className="flex gap-x-12 w-full">
+          <div className="flex gap-x-12 w-full flex-wrap">
             {
               top_seller_list.map((v, i) => {
                 return (
@@ -93,28 +93,31 @@ export default function Main() {
                   Explore More &rarr;
           </div>
         </div>
-        <div  className="w-[95%] flex text-left mx-auto mt-24 gap-x-12">
-            <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1">
-              <div className="shopper-color text-3xl">Why Become Buyer?</div>
-              <div className="text-base mt-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
-              <motion.button whileTap={{scale: 0.85}} className="shopper-bgcolor text-base w-[150px] mt-5 rounded-md h-10 text-white">Apply to Buy</motion.button>
+        <div className="flex flex-wrap">
+              <div  className="w-[95%] flex text-left mx-auto mt-24 gap-x-12 flex-wrap">
+              <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1">
+                <div className="shopper-color text-3xl">Why Become Buyer?</div>
+                <div className="text-base mt-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
+                <motion.button whileTap={{scale: 0.85}} className="shopper-bgcolor text-base w-[150px] mt-5 rounded-md h-10 text-white">Apply to Buy</motion.button>
+              </motion.div>
+              <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1 flex justify-center">
+                <img src={become_buyer} alt="Become Buyer" className="h-[200px]"/>
+              </motion.div>
+          </div>
+          <div  className="w-[90%] flex text-left mx-auto mt-24 gap-x-12 flex-wrap">
+            <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1 flex justify-center">
+              <img src={become_seller} alt="Become Seller" className="h-[200px]"/>
             </motion.div>
-            <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1 flex justify-center">
-              <img src={become_buyer} alt="Become Buyer" className="h-[200px]"/>
-            </motion.div>
+            <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1">
+                <div className="shopper-color text-3xl">Why Become Seller?</div>
+                <div className="text-base mt-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
+                <motion.button whileTap={{scale: 0.85}} className="shopper-bgcolor text-base w-[150px] mt-5 rounded-md h-10 text-white">Apply to Sell</motion.button>
+              </motion.div>
+          </div>
         </div>
-        <div  className="w-[90%] flex text-left mx-auto mt-24 gap-x-12">
-          <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1 flex justify-center">
-            <img src={become_seller} alt="Become Seller" className="h-[200px]"/>
-          </motion.div>
-          <motion.div initial={{opacity: 0, x: 50}} whileInView={{opacity: 1, x:0, transition : {duration : 1}}} className="flex-1">
-              <div className="shopper-color text-3xl">Why Become Seller?</div>
-              <div className="text-base mt-6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>
-              <motion.button whileTap={{scale: 0.85}} className="shopper-bgcolor text-base w-[150px] mt-5 rounded-md h-10 text-white">Apply to Sell</motion.button>
-            </motion.div>
-        </div>
-        <div className="w-[95%] flex text-left mx-auto mt-24 gap-x-12">
-            <div className="flex-1">
+        
+        <div className="w-[95%] flex text-left mx-auto mt-24 gap-12 flex-wrap">
+            <div className="flex-1 img-container">
                 <motion.div whileHover={{scale: 1.1}} className="mb-12">
                     <div className="border-[#E0E0E0] border pb-5 flex-1">
                     <img src={visual_electronics} alt="visual electronics" className="h-[450px] w-full  border-t border-[#E0E0E0]" />
@@ -165,7 +168,7 @@ export default function Main() {
               </div>
             
             </div>
-            <div  className="flex-1">
+            <div  className="flex-1 img-container">
                 <div className="grid gap-x-12 gap-y-12 w-full grid-cols-2">
                 {
                   landscape_list2.map((v, i) => {
@@ -193,16 +196,16 @@ export default function Main() {
                   })
                 }
               </div>
-              <div className="mt-12">
-                    <motion.div whileHover={{scale: 1.1}} className="border-[#E0E0E0] border pb-5 flex-1">
-                    <img src={cactus} alt="cactus" className="h-[450px] w-full" />
-                    <div className="flex justify-between p-5 pb-0 gap-x-2 w-full  border-t border-[#E0E0E0]">
-                      <div>
+              <motion.div whileHover={{scale: 1.1}} className="mt-12">
+                    <div className="border-[#E0E0E0] border pb-5 flex-1">
+                    <img src={cactus} alt="cactus" className="h-[450px] w-full  border-t border-[#E0E0E0]" />
+                    <div className="flex justify-between p-5 pb-0 gap-x-2 w-full">
+                      <div  className="w-full">
                         <div className="text-[#757575] text-sm">
                           Cobalt Union
                         </div>
                         <div className="max-w-[97%] text-ellipsis whitespace-nowrap overflow-hidden text-base">
-                        cactus
+                          cactus
                         </div>
                         <div className="shopper-color text-lg">
                           $125.00
@@ -212,8 +215,8 @@ export default function Main() {
                         <img src={right_arrow} className="w-[14px] h-[24px]" alt="right_arrow" />
                       </div>
                     </div>
-                  </motion.div>
-                </div>
+                  </div>
+                </motion.div>
             </div>
         </div>
       </div>
