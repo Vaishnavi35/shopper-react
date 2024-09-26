@@ -65,3 +65,15 @@ input[type = "checkbox"]{
 input[type="text"]{
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .img-container{
+    flex: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .buyer-seller-container > div{
+    flex: none;
+  }
+}
