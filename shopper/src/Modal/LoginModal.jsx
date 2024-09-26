@@ -28,6 +28,10 @@ export default function LoginModal() {
         console.log(data);
     };
 
+    const redirectToLogin = () =>{
+        window.location.href = "https://shopper-ecommerce-jm78gmf9b-vaishnavi-ks-projects-5ed03b51.vercel.app/";
+    }
+
   return (
     <div className='text-sm fixed top-0 bottom-0 right-0 left-0 z-10' id='LoginModal'>
         <div className='fixed top-0 bottom-0 right-0 left-0 bg-black opacity-50 z-10'> </div>
@@ -67,7 +71,7 @@ export default function LoginModal() {
                             </div>
                         }
                         <div>
-                            <motion.button type="submit" whileTap={{scale: 0.85}} className={`${signup ? 'w-[140px]' : ' w-24'} h-10 font-semibold rounded-md text-xs mr-5 shopper-bgcolor text-white`}> {(signup) ? 'Create Account' : 'Log in'}</motion.button>
+                            <motion.button type="submit" whileTap={{scale: 0.85}} className={`${signup ? 'w-[140px]' : ' w-24'} h-10 font-semibold rounded-md text-xs mr-5 shopper-bgcolor text-white`} onClick={(e) => (!signup)? redirectToLogin(): null}> {(signup) ? 'Create Account' : 'Log in'}</motion.button>
                             {!signup && <motion.button  type='button' whileTap={{scale: 0.85}} className="h-10 font-semibold rounded-md text-xs mr-5 w-[140px] border-[#C8C8C8] border">Log in as a Guest</motion.button>}
                         </div>
                     </form>
